@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function msg(){
+         var f_name=document.getElementById("a1").value;
+         var l_name=document.getElementById("a2").value;
+         var db=document.getElementById("a3").value;
+         var psw=document.getElementById("a4").value;
+        
+        var obj=[{
+            "firstname" : f_name,
+            "lastname" : l_name,
+            "dob":db,
+            "password": psw
+        }];
+        for(objs in obj)
+        {
+            console.log(obj);
+        }
+    }
+    </script>
+</head>
+<body>
+    <form>
+        <label>firstname</label>
+        <input type="text" id="a1" name="firstname">
+        <label>lastname</label>
+        <input type="text" id="a2" name="lastname">
+        <label>DOB</label>
+        <input type="date" id="a3" name="dob">
+        <label>password</label>
+        <input type="password" id="a4" name="psw">
+        <input type="button" value="submit" id="a5" onclick="msg()">
+        <p id="res"></p>
+    </form>
+</body>
+</html>
