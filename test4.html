@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>docabc</title>
+    <script>
+        function valid()
+        {
+            var pwd1=document.getElementById("pass1").value;
+            var pwd2=document.getElementById("pass2").value;
+             if((pwd1=="null") || (pwd1=="")) {
+                document.getElementById("pass1").focus();
+                alert("your input is empty");
+             }
+             else if  ((pwd2=="") || (pwd2=="null"))
+             {
+                
+                document.getElementById("pass2").focus();
+                alert("Your input is not valid");
+             }               
+             if(pwd1==pwd2)
+             {
+                 alert("your password valid");
+             }
+            else 
+             {
+                 alert("Your password not valid");
+             }
+        }
+    </script>
+</head>
+<body>
+    <table>
+    <tr>
+        <td>
+            Enter Your Name:
+        </td>
+        <td>
+            <input type="text" id="name">
+        </td>
+    </tr>
+    <tr>
+        <td>
+        Enter Your Password:
+        </td>
+        <td>
+        <input type="password" id="pass1" >
+        </td>
+    </tr>
+    <tr>
+        <td>
+        Confrim your Password:
+        </td>
+        <td>
+        <input type="password" id="pass2">
+        </td>
+    </tr>
+    </table>
+    <button onclick="valid()">SUBMIT</button>
+</body>
+</html>
