@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="cals.css">
+    <script>
+        function addition()
+        {
+            var v1 = parseInt(document.getElementById("v1").value);
+            var v2 = parseInt(document.getElementById("v2").value);
+            var sum=v1+v2;
+            document.getElementById("result").innerHTML=sum;
+            
+            
+        }
+        function subt()
+        {
+            var v1 = parseInt(document.getElementById("v1").value);
+            var v2 = parseInt(document.getElementById("v2").value);
+            var sum=v1-v2;
+            document.getElementById("result").innerHTML=sum;
+           
+            
+        }
+        function mult()
+        {
+            var v1 = parseInt(document.getElementById("v1").value);
+            var v2 = parseInt(document.getElementById("v2").value);
+            var sum=v1*v2;
+            document.getElementById("result").innerHTML=sum;
+            
+            
+        }
+        function divis()
+        {
+            var v1 = parseInt(document.getElementById("v1").value);
+            var v2 = parseInt(document.getElementById("v2").value);
+            sum=v1/v2;
+            document.getElementById("result").innerHTML=sum;
+            
+            
+            
+        }
+    </script>
+</head>
+<body>
+    <div class="border w-50 mx-auto p-4">
+      <form>
+        <h1 class="text-center">Calculator</h1>
+        <label>Enter the I number:</label><input type="text" name="v1" id="v1"class=" m-3 p-2"><br>
+        <label>Enter the II number:</label><input type="text" name="v2" id="v2"class=" m-3 p-2"><br><br>
+        <div class="d-inline-flex p-2" >
+            <input type="button" value="Add"name="add" id="add" onclick="addition()" class=" m-3 p-2">
+            <input type="button" value="Subtract"name="sub" id="sub" onclick="subt()" class="m-3 p-2">
+            <input type="button" value="Multiplication"name="mul" id="mul" onclick="mult()" class="m-3 p-2">
+            <input type="button" value="Division"name="div" id="divi" onclick="divis()" class="m-3 p-2">
+        </div>
+        <br><br>
+
+       <p>Answer is:</p>
+        <p id="result"> </p>
+      </form>
+
+    </div>
+    
+</body>
+</html>
